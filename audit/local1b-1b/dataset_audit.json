@@ -1,0 +1,57 @@
+{
+ "schema": "x1.dataset_audit",
+ "version": "1.0.0",
+ "date": "2026-10-13",
+ "dataset": "LOCAL-1B conversation 1,077,064,999 tokens (MASTER-MANIFEST.json)",
+ "gate_D": {
+  "exact_duplicates": {
+   "value": 0,
+   "threshold": 0,
+   "status": "PASS",
+   "evidence": "global blake2b dedup incl. all sealed pools + per-pack verify (record_id unique, 0 dup)"
+  },
+  "near_duplicates": {
+   "threshold": "<=5%",
+   "status": "PASS",
+   "gen_minhash_w5g_ge085": "0.0000 (10k pairs)",
+   "webqa_minhash_w5g_ge085": "0.0000 (10k pairs)",
+   "passage_char12g_ge085": "0.0000 (400 pairs, proxy: full MinHash infeasible on long articles)"
+  },
+  "template_top1_le01": {
+   "gen": 0.006,
+   "webqa": 0.148,
+   "passage": 0.0449,
+   "threshold": "<=1%",
+   "status": "FAIL (webqa/passage over; gen pass)",
+   "note": "webqa shares TH-turn openers; passage shares template heads (e.g. romanization 'คำ:')"
+  },
+  "template_top100_le10": {
+   "gen": 0.139,
+   "webqa": 0.705,
+   "passage": 0.149,
+   "threshold": "<=10%",
+   "status": "FAIL (all strata over)"
+  },
+  "conversation_format_100": {
+   "EN-turns": 0.0,
+   "status": "FAIL",
+   "measured": "gen 100% single-sentence; webqa 100% TH-turns (ผู้ใช้/ผู้ช่วย); passages no turns"
+  },
+  "length_short": {
+   "note": "per-pack manifests carry mean via tokens/records",
+   "phase3_avg": 23.3,
+   "pack06_avg": 25.1,
+   "pack07_avg": 969.5,
+   "pack08_avg": 1078.0,
+   "pack09_avg": 2652.0,
+   "pack10_avg": 22.5,
+   "pack11_avg": 1845.0,
+   "pack12_avg": 5728.0
+  },
+  "th_en_split": {
+   "note": "TH-dominant; EN packs: pack-07 (144.9M) + gutenberg (17+39M) + enwiki-SO (23M) + wisdom (5M) ≈ 229M EN (~21%)"
+  }
+ },
+ "waiver": "Bro order 2026-10-13 (original plan): trial-train R0 proceeds despite Gate D misses; Bro gives direction after seeing the run. Misses owned by data side, documented here.",
+ "length_detail_pending": false
+}

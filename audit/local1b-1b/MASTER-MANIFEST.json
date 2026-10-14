@@ -1,0 +1,100 @@
+{
+ "schema": "x1.local1b.master-manifest",
+ "version": "3.0.0",
+ "date": "2026-10-14",
+ "tokenizer_lock": "911cf50264626dcad578682393a2a2d7fede067478c5928332cc6d6930cae40d",
+ "total_records": 22168614,
+ "total_tokens": 1036443554,
+ "packs": [
+  {
+   "pack": "pack-06v2",
+   "records": 2818662,
+   "tokens": 70122610,
+   "approval": "Bro 2026-10-13 (N14: mt_bench removed; public test-split kobkrit-mari_test removed per Dang; +bench/xsplit gates)",
+   "verify_fails": []
+  },
+  {
+   "pack": "pack-07",
+   "records": 144577,
+   "tokens": 141641664,
+   "approval": "Bro 2026-10-11 (SA BRO-0002)",
+   "verify_fails": []
+  },
+  {
+   "pack": "pack-08",
+   "records": 145554,
+   "tokens": 150009335,
+   "approval": "Bro 2026-10-11 (SA BRO-0002, E1 PASS)",
+   "verify_fails": []
+  },
+  {
+   "pack": "pack-09",
+   "records": 12938,
+   "tokens": 34422089,
+   "approval": "Bro 2026-10-11 (SA BRO-0003 chain + PD gutenberg, plan-A)",
+   "verify_fails": []
+  },
+  {
+   "pack": "pack-10",
+   "records": 2115660,
+   "tokens": 51950917,
+   "approval": "Bro 2026-10-11 (plan-A top-up gen + wisdom canon PD)",
+   "verify_fails": []
+  },
+  {
+   "pack": "pack-11",
+   "records": 68329,
+   "tokens": 127582701,
+   "approval": "Bro 2026-10-11 (83M closing slices: PD+MIT; enwiki/SO needs SA)",
+   "verify_fails": []
+  },
+  {
+   "pack": "pack-12",
+   "records": 3683,
+   "tokens": 20976544,
+   "approval": "Bro 2026-10-11 (SA BRO-0004 enwiki/SO)",
+   "verify_fails": []
+  },
+  {
+   "pack": "pack-13",
+   "records": 38217,
+   "tokens": 48381566,
+   "approval": "Bro 2026-10-11 (plan-A closing: news slice-2 MIT)",
+   "verify_fails": []
+  },
+  {
+   "pack": "phase3v2a",
+   "records": 3015486,
+   "tokens": 58504387,
+   "approval": "Bro 2026-10-13 (phase3v2 split in 4, small-footprint; state carries dedup)",
+   "verify_fails": []
+  },
+  {
+   "pack": "phase3v2b",
+   "records": 4843011,
+   "tokens": 119409249,
+   "approval": "Bro 2026-10-13 (phase3v2 split in 4)",
+   "verify_fails": []
+  },
+  {
+   "pack": "phase3v2c",
+   "records": 4193485,
+   "tokens": 93406728,
+   "approval": "Bro 2026-10-13 (phase3v2 split in 4)",
+   "verify_fails": []
+  },
+  {
+   "pack": "phase3v2d",
+   "records": 4769012,
+   "tokens": 120035764,
+   "approval": "Bro 2026-10-13 (phase3v2 split in 4)",
+   "verify_fails": []
+  }
+ ],
+ "superseded": [
+  "phase3-sealed (by phase3v2a-d)",
+  "pack-06 (by pack-06v2)"
+ ],
+ "gates": "v2 gates on all packs (bench-13gram + xsplit-0 + groupC filter); N14 entries 1-3; E1 PASS; SA BRO-0001..0004",
+ "note": "LOCAL-1B 1B COMPLETE. Trial R0 per Bro 2026-10-13."
+}
